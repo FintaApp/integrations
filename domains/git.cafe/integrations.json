@@ -1,36 +1,14 @@
 {
-  "description": "GitCafe is a Git forge for hosting repositories and collaborating on code. It provides repository browsing, issues, pull requests, reviews, and related account and integration workflows.",
-  "discoveredAt": "2026-09-23T03:01:57.974Z",
+  "discoveredAt": "2026-09-24T02:47:14.640Z",
   "domain": "git.cafe",
-  "summary": "GitCafe exposes a REST API at `https://git.cafe/api`, an OAuth-protected remote MCP server at `https://git.cafe/mcp`, and an official `cafe` CLI distributed as `@gitcafe/cli` for Bun.",
+  "summary": "Exposes mcp for this service.",
   "surfaces": [
     {
       "authStatus": "required",
-      "name": "GitCafe MCP server",
+      "name": "MCP server",
       "slug": "gitcafe-mcp-server",
       "type": "mcp",
       "url": "https://git.cafe/mcp"
-    },
-    {
-      "authStatus": "required",
-      "command": "cafe",
-      "name": "GitCafe CLI",
-      "packages": [
-        {
-          "identifier": "@gitcafe/cli",
-          "registryType": "npm",
-          "runtimeHint": "bun"
-        }
-      ],
-      "slug": "cafe-cli",
-      "type": "cli"
-    },
-    {
-      "authStatus": "required",
-      "name": "GitCafe REST API",
-      "slug": "gitcafe-http-api",
-      "type": "http",
-      "url": "https://git.cafe/api"
     }
   ]
 }

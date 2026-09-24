@@ -1,22 +1,6 @@
 {
-  "description": "Gmail is Google's email service. Its developer platform lets apps and agents read, manage, and send mailbox data through the Gmail API and related MCP tooling.",
-  "discoveredAt": "2026-09-07T16:06:14.220Z",
+  "discoveredAt": "2026-09-24T04:40:30.041Z",
   "domain": "gmail.com",
-  "summary": "gmail.com exposes a Gmail REST API and a Gmail MCP server; both use Google-issued credentials, primarily OAuth 2.0, and the REST API also documents a `key` query parameter for Google API keys.",
-  "surfaces": [
-    {
-      "authStatus": "required",
-      "name": "Gmail API",
-      "slug": "gmail-api",
-      "type": "http",
-      "url": "https://gmail.googleapis.com/gmail/v1"
-    },
-    {
-      "authStatus": "required",
-      "name": "Gmail MCP server",
-      "slug": "gmail-mcp-server",
-      "type": "mcp",
-      "url": "https://gmail.googleapis.com/mcp/"
-    }
-  ]
+  "summary": "gmail.com integration surfaces",
+  "surfaces": []
 }
