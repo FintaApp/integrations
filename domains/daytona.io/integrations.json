@@ -1,8 +1,8 @@
 {
-  "description": "Daytona provides cloud sandboxes for running AI-generated code in isolated environments. Developers use it to create and manage sandboxes, snapshots, volumes, and related runtime operations.",
-  "discoveredAt": "2026-07-05T19:34:13.024Z",
+  "description": "Daytona provides isolated cloud sandboxes for running code and agent workflows, with APIs and tools for sandbox lifecycle, filesystem, execution, desktop automation, and telemetry. It is used to provision and manage secure runtime environments for AI-generated code.",
+  "discoveredAt": "2026-09-24T18:49:23.854Z",
   "domain": "daytona.io",
-  "summary": "Daytona exposes a REST API on `app.daytona.io`, a per-sandbox Toolbox HTTP API on `proxy.app.daytona.io`, and a `daytona` CLI; the main API and CLI use Daytona API keys, while the Toolbox API docs do not show any authentication requirement.",
+  "summary": "Daytona exposes three authenticated HTTP APIs (Platform, Toolbox, and Analytics), a `daytona` CLI, and a local stdio MCP server started by that CLI.",
   "surfaces": [
     {
       "authStatus": "required",
@@ -12,13 +12,24 @@
         {
           "identifier": "daytonaio/cli/daytona",
           "registryType": "homebrew"
+        },
+        {
+          "identifier": "daytonaio/daytona",
+          "registryType": "github"
         }
       ],
       "slug": "daytona-cli",
       "type": "cli"
     },
     {
-      "authStatus": "none",
+      "authStatus": "required",
+      "name": "Daytona MCP server",
+      "slug": "daytona-mcp-server",
+      "type": "mcp",
+      "url": "stdio://daytona mcp start"
+    },
+    {
+      "authStatus": "required",
       "name": "Daytona Toolbox API",
       "slug": "daytona-toolbox-api",
       "spec": "https://www.daytona.io/docs/toolbox-openapi.json",
@@ -27,7 +38,15 @@
     },
     {
       "authStatus": "required",
-      "name": "Daytona REST API",
+      "name": "Daytona Analytics API",
+      "slug": "daytona-analytics-api",
+      "spec": "https://www.daytona.io/docs/analytics-openapi.json",
+      "type": "http",
+      "url": "https://analytics.app.daytona.io"
+    },
+    {
+      "authStatus": "required",
+      "name": "Daytona Platform API",
       "slug": "daytona-rest-api",
       "spec": "https://daytona.io/openapi.json",
       "type": "http",
