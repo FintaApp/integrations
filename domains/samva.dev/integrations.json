@@ -1,9 +1,16 @@
 {
-  "description": "Samva is an email platform for developers and product teams, covering transactional email sending, templates, scheduling, campaigns, inbound receiving, and signed webhooks. It also provides hosted MCP access so AI agents can query public documentation and, with credentials, use organization-scoped email tools.",
-  "discoveredAt": "2026-09-16T13:19:03.755Z",
+  "description": "Samva is a developer email platform for transactional and product email, with templates, inbound threading, analytics, and signed webhooks. It provides organization-scoped tools for sending and managing email through API, CLI, and MCP interfaces.",
+  "discoveredAt": "2026-09-26T06:48:34.513Z",
   "domain": "samva.dev",
-  "summary": "Samva exposes a versioned HTTP email API at `https://api.samva.dev/v1`, a hosted MCP server at `https://mcp.samva.dev` plus a public unauthenticated MCP path at `https://samva.dev/mcp`, and a `samva` CLI; auth is via Samva API keys, MCP OAuth discovery, or CLI device-login OAuth depending on surface.",
+  "summary": "Samva exposes a REST email API, a hosted MCP server, a second public `/mcp` endpoint, and a `samva` CLI; primary auth is API keys, with OAuth for MCP clients and interactive CLI sessions.",
   "surfaces": [
+    {
+      "authStatus": "required",
+      "name": "Samva API",
+      "slug": "samva-rest-api-2-2-2-2-2-2-2",
+      "type": "http",
+      "url": "https://api.samva.dev/v1"
+    },
     {
       "authStatus": "required",
       "name": "Samva MCP",
@@ -13,7 +20,7 @@
     },
     {
       "authStatus": "none",
-      "name": "Samva MCP (public path)",
+      "name": "Samva public MCP endpoint",
       "slug": "samva-mcp-public",
       "type": "mcp",
       "url": "https://samva.dev/mcp"
@@ -35,14 +42,7 @@
     {
       "authStatus": "required",
       "name": "Samva API",
-      "slug": "samva-rest-api-2-2-2-2-2",
-      "type": "http",
-      "url": "https://api.samva.dev/v1"
-    },
-    {
-      "authStatus": "required",
-      "name": "Samva API",
-      "slug": "samva-rest-api-2-2-2-2-2-2",
+      "slug": "samva-rest-api-2-2-2-2-2-2-2-2",
       "spec": "https://api.samva.dev/v1/openapi.json",
       "type": "http",
       "url": "https://api.samva.dev/v1"
