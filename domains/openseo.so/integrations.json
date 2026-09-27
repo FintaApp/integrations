@@ -1,0 +1,15 @@
+{
+  "description": "OpenSEO is an SEO platform and open-source toolkit for keyword research, SERP and competitor analysis, local SEO, backlink overview, and Google Search Console workflows. Its hosted service lets AI agents connect to these capabilities through an MCP server.",
+  "discoveredAt": "2026-09-26T23:17:32.284Z",
+  "domain": "openseo.so",
+  "summary": "OpenSEO exposes one documented developer surface on this domain: a hosted MCP server at `https://app.openseo.so/mcp`, authenticated either by browser-based OpenSEO OAuth during client connection or by a personal API key sent as `Authorization: Bearer` or `x-api-key`.",
+  "surfaces": [
+    {
+      "authStatus": "required",
+      "name": "OpenSEO MCP",
+      "slug": "openseo-mcp",
+      "type": "mcp",
+      "url": "https://app.openseo.so/mcp"
+    }
+  ]
+}
