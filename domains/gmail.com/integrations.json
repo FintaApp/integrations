@@ -1,6 +1,21 @@
 {
-  "discoveredAt": "2026-09-24T04:40:30.041Z",
+  "description": "Gmail is Google's email service within Google Workspace and consumer Google accounts. It provides programmatic access to mailbox data and mail operations through the Gmail API, and also documents an MCP server for AI-agent access.",
+  "discoveredAt": "2026-09-28T00:03:39.812Z",
   "domain": "gmail.com",
-  "summary": "gmail.com integration surfaces",
-  "surfaces": []
+  "summary": "gmail.com exposes a Gmail REST API and a documented Gmail MCP server; the REST API requires Google OAuth 2.0 bearer tokens and can also be accessed via service-account based delegated authorization.",
+  "surfaces": [
+    {
+      "authStatus": "required",
+      "name": "Gmail API",
+      "slug": "gmail-api",
+      "type": "http",
+      "url": "https://gmail.googleapis.com/gmail/v1"
+    },
+    {
+      "authStatus": "unknown",
+      "name": "Gmail MCP server",
+      "slug": "gmail-mcp-server",
+      "type": "mcp"
+    }
+  ]
 }

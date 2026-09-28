@@ -1,0 +1,23 @@
+{
+  "description": "Pyrite Cloud is a managed cloud platform for deploying and operating applications, databases, workers, storage, networking, and AI-related infrastructure without managing servers. It provides global deployment, scaling, observability, and team management features for developers and businesses.",
+  "discoveredAt": "2026-09-27T16:07:55.751Z",
+  "domain": "www.pyrite.cloud",
+  "summary": "Pyrite Cloud exposes a documented REST API at `https://api.pyrite.cloud` with an OpenAPI spec, plus a Streamable HTTP MCP server at `https://api.pyrite.cloud/mcp` authenticated with a Team API Key; the site also mentions a CLI, but no standalone CLI authentication or endpoint details were documented on this domain.",
+  "surfaces": [
+    {
+      "authStatus": "required",
+      "name": "Pyrite Cloud MCP Server",
+      "slug": "pyrite-cloud-mcp-server",
+      "type": "mcp",
+      "url": "https://api.pyrite.cloud/mcp"
+    },
+    {
+      "authStatus": "unknown",
+      "name": "Pyrite Cloud REST API",
+      "slug": "pyrite-cloud-rest-api",
+      "spec": "https://api.pyrite.cloud/openapi.json",
+      "type": "http",
+      "url": "https://api.pyrite.cloud"
+    }
+  ]
+}

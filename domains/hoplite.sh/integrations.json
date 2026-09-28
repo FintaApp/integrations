@@ -1,0 +1,39 @@
+{
+  "description": "Hoplite is a cloud coding-agent platform for starting, supervising, and reviewing work in GitHub-backed repositories. It runs agent work in managed cloud workspaces and can return repository changes and pull requests for human review.",
+  "discoveredAt": "2026-09-28T13:19:06.481Z",
+  "domain": "hoplite.sh",
+  "summary": "Hoplite exposes one organization-scoped HTTP API at `https://api.hoplite.sh`, one OAuth/API-key-protected MCP server at `https://api.hoplite.sh/mcp`, and an official `hoplite` CLI distributed via npm and Homebrew.",
+  "surfaces": [
+    {
+      "authStatus": "required",
+      "name": "Hoplite MCP server",
+      "slug": "hoplite-mcp-server",
+      "type": "mcp",
+      "url": "https://api.hoplite.sh/mcp"
+    },
+    {
+      "authStatus": "required",
+      "command": "hoplite",
+      "name": "hoplite CLI",
+      "packages": [
+        {
+          "identifier": "@usehoplite/cli",
+          "registryType": "npm"
+        },
+        {
+          "identifier": "CarbonCopyInc/tap/hoplite",
+          "registryType": "homebrew"
+        }
+      ],
+      "slug": "hoplite-cli",
+      "type": "cli"
+    },
+    {
+      "authStatus": "required",
+      "name": "Hoplite API",
+      "slug": "hoplite-api",
+      "type": "http",
+      "url": "https://api.hoplite.sh"
+    }
+  ]
+}

@@ -1,29 +1,15 @@
 {
-  "description": "Context7 provides version-specific software-library documentation and code examples for developers and AI coding agents. It indexes docs from repositories, websites, llms.txt files, OpenAPI specs, and similar sources, then serves relevant snippets on demand.",
-  "discoveredAt": "2026-07-09T16:50:02.507Z",
+  "description": "Context7 provides version-specific software library documentation and code examples for AI coding agents and developers. It indexes sources such as code repositories, websites, llms.txt files, OpenAPI specs, and Confluence spaces, then serves filtered documentation snippets and search results.",
+  "discoveredAt": "2026-09-28T12:24:08.414Z",
   "domain": "context7.com",
-  "summary": "Context7 exposes a REST API at `https://context7.com/api`, hosted MCP endpoints at `https://mcp.context7.com/mcp` and `https://mcp.context7.com/mcp/oauth`, and the `ctx7` CLI; authentication is via Context7 API keys, with OAuth also supported for the hosted MCP OAuth endpoint.",
+  "summary": "Context7 exposes a REST API at `https://context7.com/api` (with OpenAPI at `https://context7.com/openapi.json`), a public unauthenticated Docs7 browser analytics HTTP endpoint, a hosted MCP server at `https://mcp.context7.com/mcp`, and the `ctx7` CLI.",
   "surfaces": [
-    {
-      "authStatus": "required",
-      "name": "Context7 REST API",
-      "slug": "context7-public-api-2",
-      "type": "http",
-      "url": "https://context7.com/api"
-    },
     {
       "authStatus": "required",
       "name": "Context7 MCP Server",
       "slug": "context7",
       "type": "mcp",
       "url": "https://mcp.context7.com/mcp"
-    },
-    {
-      "authStatus": "required",
-      "name": "Context7 OAuth MCP Server",
-      "slug": "context7-mcp-oauth-endpoint",
-      "type": "mcp",
-      "url": "https://mcp.context7.com/mcp/oauth"
     },
     {
       "authStatus": "required",
@@ -40,12 +26,11 @@
       "type": "cli"
     },
     {
-      "authStatus": "required",
-      "name": "Context7 REST API",
-      "slug": "context7-public-api-2-2",
-      "spec": "https://context7.com/openapi.json",
+      "authStatus": "none",
+      "name": "Docs7 browser analytics",
+      "slug": "docs7-browser-analytics",
       "type": "http",
-      "url": "https://context7.com/api"
+      "url": "https://context7.com/api/docs7/analytics"
     }
   ]
 }

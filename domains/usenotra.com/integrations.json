@@ -1,8 +1,8 @@
 {
-  "description": "Notra is a generative engine optimization and content operations product that tracks how AI answer engines mention a brand, attributes AI-agent traffic, and helps teams turn content gaps and shipped work into drafts like articles, changelogs, and social posts.",
-  "discoveredAt": "2026-09-17T13:31:00.225Z",
+  "description": "Notra is a GEO and AI-content platform that tracks brand visibility in AI engines, attributes AI agent traffic, identifies content gaps, and helps teams generate posts and changelogs in a saved brand voice.",
+  "discoveredAt": "2026-09-27T20:52:51.930Z",
   "domain": "usenotra.com",
-  "summary": "Notra exposes a public HTTP API at api.usenotra.com, a hosted streamable-HTTP MCP server at mcp.usenotra.com, and an npm-distributed `notra` CLI; the API and MCP accept bearer API keys and OAuth tokens, while the CLI supports browser/device OAuth login and API-key-based automation.",
+  "summary": "Notra exposes a bearer-authenticated HTTP API at api.usenotra.com, a hosted OAuth/API-key MCP server at mcp.usenotra.com/mcp, and an npm-distributed `notra` CLI for the same workspace operations.",
   "surfaces": [
     {
       "authStatus": "required",
@@ -28,14 +28,14 @@
     {
       "authStatus": "required",
       "name": "Notra API",
-      "slug": "notra-rest-api-2",
+      "slug": "notra-rest-api-2-2",
       "type": "http",
       "url": "https://api.usenotra.com"
     },
     {
       "authStatus": "required",
       "name": "Notra API",
-      "slug": "notra-rest-api-2-2",
+      "slug": "notra-rest-api-2-2-2",
       "spec": "https://api.usenotra.com/openapi.json",
       "type": "http",
       "url": "https://api.usenotra.com"

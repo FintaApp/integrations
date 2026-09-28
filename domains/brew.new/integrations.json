@@ -1,0 +1,47 @@
+{
+  "description": "Brew is an AI-native email service provider that stores contacts, manages sending infrastructure and domain authentication, and uses AI to generate on-brand emails, automations, and audience segments. It also provides analytics, domain management, and automation tooling for marketing and transactional email workflows.",
+  "discoveredAt": "2026-09-28T13:19:07.532Z",
+  "domain": "brew.new",
+  "summary": "brew.new exposes three developer integration surfaces: a REST Public API v1, a hosted Streamable HTTP MCP server, and a standalone `brew-cli`; the API and CLI use Brew API keys, while MCP supports either self-onboarding OAuth 2.1 with DCR+PKCE or a Brew API key.",
+  "surfaces": [
+    {
+      "authStatus": "required",
+      "name": "MCP server",
+      "slug": "mcp-server",
+      "type": "mcp",
+      "url": "https://brew.new/mcp"
+    },
+    {
+      "authStatus": "required",
+      "name": "Brew Public API v1",
+      "slug": "brew-public-api-v1",
+      "type": "http",
+      "url": "https://brew.new/api"
+    },
+    {
+      "authStatus": "required",
+      "name": "Brew MCP server",
+      "slug": "brew-mcp-server",
+      "type": "mcp",
+      "url": "https://brew.new/api/mcp"
+    },
+    {
+      "authStatus": "required",
+      "command": "brew-cli",
+      "name": "brew-cli",
+      "packages": [
+        {
+          "identifier": "getbrew/tap/brew-cli",
+          "registryType": "homebrew"
+        },
+        {
+          "identifier": "@brew.new/cli",
+          "registryType": "npm",
+          "runtimeHint": "Node 20+"
+        }
+      ],
+      "slug": "brew-cli",
+      "type": "cli"
+    }
+  ]
+}
