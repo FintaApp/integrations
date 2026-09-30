@@ -1,14 +1,15 @@
 {
-  "discoveredAt": "2026-07-02T21:05:56.881Z",
+  "description": "Upstash is a serverless data platform offering managed Redis, vector search, search, message queues, workflow orchestration, compute sandboxes, and blob storage. Its products are designed to be used from serverless and edge environments over HTTP as well as through management tooling.",
+  "discoveredAt": "2026-09-30T14:42:42.073Z",
   "domain": "upstash.com",
-  "summary": "Upstash exposes HTTP APIs for its Developer API, Redis REST, QStash, Vector, and Search, plus a CLI; recorded auth is Basic auth with account email + Developer API key for the Developer API/CLI, Bearer or query-token auth for Redis and QStash, Bearer auth for Vector, and Search uses a per-database REST URL/token but its exact wire auth was not confirmed.",
+  "summary": "Upstash exposes a hosted MCP server, a Developer API, product REST APIs for Redis, QStash, Workflow, Vector, and Search, plus the `upstash` CLI.",
   "surfaces": [
     {
       "authStatus": "required",
-      "name": "Upstash Developer API",
-      "slug": "upstash-developer-api",
-      "type": "http",
-      "url": "https://api.upstash.com/v2"
+      "name": "Upstash MCP Server",
+      "slug": "upstash-mcp-server",
+      "type": "mcp",
+      "url": "https://mcp.upstash.com/mcp"
     },
     {
       "authStatus": "required",
@@ -19,24 +20,54 @@
     },
     {
       "authStatus": "required",
-      "name": "Upstash QStash API",
-      "slug": "upstash-qstash-api",
-      "type": "http",
-      "url": "https://qstash.upstash.io/v2"
-    },
-    {
-      "authStatus": "required",
       "name": "Upstash Vector REST API",
       "slug": "upstash-vector-rest-api",
       "type": "http",
       "url": "<UPSTASH_VECTOR_REST_URL>"
     },
     {
-      "authStatus": "unknown",
+      "authStatus": "required",
       "name": "Upstash Search API",
       "slug": "upstash-search-api",
       "type": "http",
       "url": "<UPSTASH_SEARCH_REST_URL>"
+    },
+    {
+      "authStatus": "required",
+      "command": "upstash",
+      "name": "upstash CLI",
+      "packages": [
+        {
+          "identifier": "@upstash/cli",
+          "registryType": "npm"
+        }
+      ],
+      "slug": "upstash-cli",
+      "type": "cli"
+    },
+    {
+      "authStatus": "required",
+      "name": "Upstash QStash API",
+      "slug": "upstash-workflow-api",
+      "spec": "https://upstash.com/docs/qstash/openapi.yaml",
+      "type": "http",
+      "url": "https://qstash-{region}.upstash.io"
+    },
+    {
+      "authStatus": "required",
+      "name": "Upstash Developer API",
+      "slug": "upstash-developer-api-2",
+      "spec": "https://upstash.com/openapi.json",
+      "type": "http",
+      "url": "https://api.upstash.com/v2"
+    },
+    {
+      "authStatus": "required",
+      "name": "Upstash Workflow API",
+      "slug": "upstash-workflow-api-2",
+      "spec": "https://upstash.com/docs/workflow/openapi.yaml",
+      "type": "http",
+      "url": "https://qstash-{region}.upstash.io"
     }
   ]
 }

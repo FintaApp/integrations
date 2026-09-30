@@ -1,8 +1,8 @@
 {
-  "description": "Zoom provides video meetings, chat, phone, webinars, and related workplace and business communication services. Its platform lets organizations and developers integrate Zoom account data and workflows into their own applications.",
-  "discoveredAt": "2026-07-05T20:30:51.727Z",
+  "description": "Zoom provides video meetings, chat, phone, rooms, whiteboard, developer platform, and related workplace and customer-experience services. Its developer platform includes APIs, AI services, SDK-related APIs, and AI-agent connectivity via MCP.",
+  "discoveredAt": "2026-09-30T02:57:31.347Z",
   "domain": "zoom.com",
-  "summary": "Zoom exposes a REST API at `api.zoom.us/v2`, a GraphQL API at `api.zoom.us/v3/graphql`, and an OAuth-protected MCP server at `mcp.zoom.us/mcp/zoom/streamable`; developer authentication is via Zoom OAuth apps or Server-to-Server OAuth app credentials.",
+  "summary": "Zoom exposes a REST API at `api.zoom.us/v2`, a beta GraphQL API at `api.zoom.us/v3/graphql`, an OAuth-protected MCP server at `mcp.zoom.us/mcp/zoom/streamable`, and the Zoom Rooms Control System SSH CLI surface.",
   "surfaces": [
     {
       "authStatus": "required",
@@ -14,17 +14,24 @@
     },
     {
       "authStatus": "required",
-      "name": "Zoom for Claude MCP server",
+      "name": "Zoom MCP server",
       "slug": "zoom-for-claude-mcp-server",
       "type": "mcp",
       "url": "https://mcp.zoom.us/mcp/zoom/streamable"
     },
     {
       "authStatus": "required",
+      "command": "ssh",
+      "name": "Zoom Rooms Control System API",
+      "slug": "zoom-rooms-control-system-api",
+      "type": "cli"
+    },
+    {
+      "authStatus": "required",
       "name": "Zoom REST API",
       "slug": "zoom-rest-api",
       "type": "http",
-      "url": "https://api.zoom.us/v2/"
+      "url": "https://api.zoom.us/v2"
     }
   ]
 }

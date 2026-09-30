@@ -1,8 +1,8 @@
 {
-  "description": "Invent is an AI-native customer communication platform for running assistants, shared inboxes, contacts, broadcasts, knowledge, workflows, and channel integrations such as WhatsApp, Instagram, Messenger, Telegram, Slack, Gmail, SMS, and web chat. Businesses use it to manage customer conversations and automation across those channels.",
-  "discoveredAt": "2026-08-27T22:10:25.286Z",
+  "description": "Invent is a customer communication platform for businesses to run AI assistants across messaging channels, shared inboxes, contacts, broadcasts, knowledge, workflows, and related workspace features. It lets organizations manage conversations, channels, campaigns, and operational data from one system.",
+  "discoveredAt": "2026-09-29T22:01:27.303Z",
   "domain": "useinvent.com",
-  "summary": "useinvent.com exposes a documented REST API at api.useinvent.com authenticated with an Invent API key, plus a public website-widget embed script on www.useinvent.com; no GraphQL API, CLI, or MCP server is currently documented.",
+  "summary": "useinvent.com exposes an authenticated REST API at `https://api.useinvent.com` and an MCP server at `https://api.useinvent.com/mcp`; the REST API uses Invent API keys, while MCP supports OAuth sign-in and also documents API-key access.",
   "surfaces": [
     {
       "authStatus": "required",
@@ -12,11 +12,11 @@
       "url": "https://api.useinvent.com"
     },
     {
-      "authStatus": "none",
-      "name": "Invent website widget embed",
-      "slug": "invent-website-widget-embed",
-      "type": "http",
-      "url": "https://www.useinvent.com/embed.js"
+      "authStatus": "required",
+      "name": "Invent MCP server",
+      "slug": "invent-mcp-server",
+      "type": "mcp",
+      "url": "https://api.useinvent.com/mcp"
     }
   ]
 }

@@ -1,14 +1,7 @@
 {
-  "description": "integrations.sh is a public directory that catalogs integration surfaces such as MCP servers, OpenAPI APIs, GraphQL endpoints, and CLIs across many services. Its homepage presents searchable listings by domain and format.",
-  "discoveredAt": "2026-09-25T12:42:44.090Z",
+  "description": "integrations.sh is a website that catalogs publicly accessible integration surfaces such as MCP servers, OpenAPI APIs, GraphQL endpoints, and CLIs across many service domains. It lets users browse and inspect those integrations by domain.",
+  "discoveredAt": "2026-09-30T05:42:36.673Z",
   "domain": "integrations.sh",
-  "summary": "Public website only; no documented developer integration surfaces on integrations.sh itself were found.",
-  "surfaces": [
-    {
-      "authStatus": "none",
-      "name": "integrations.sh website",
-      "slug": "integrations-sh-website",
-      "type": "http"
-    }
-  ]
+  "summary": "integrations.sh exposes a public website/catalog only; no documented developer integration surfaces (HTTP API, GraphQL API, MCP server, or CLI) were found on the domain.",
+  "surfaces": []
 }
