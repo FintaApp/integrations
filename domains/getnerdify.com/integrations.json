@@ -1,0 +1,15 @@
+{
+  "description": "Nerdify is a nearshore software engineering firm based in Managua, Nicaragua that builds and maintains web and mobile products for clients. It also offers AI feature and agent development services and technical training.",
+  "discoveredAt": "2026-10-01T06:13:59.384Z",
+  "domain": "getnerdify.com",
+  "summary": "getnerdify.com exposes an OAuth-protected MCP server at `https://getnerdify.com/mcp`; no public REST, GraphQL, or CLI integration surfaces were found on this domain.",
+  "surfaces": [
+    {
+      "authStatus": "required",
+      "name": "Nerdify MCP Server",
+      "slug": "nerdify-mcp-server",
+      "type": "mcp",
+      "url": "https://getnerdify.com/mcp"
+    }
+  ]
+}

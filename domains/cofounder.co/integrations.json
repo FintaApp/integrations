@@ -1,0 +1,44 @@
+{
+  "description": "Cofounder is an agent-native operating system for running a company, spanning engineering, sales, marketing, finance, and operations. Its product includes a web app plus hosted agent interfaces for programmatic access.",
+  "discoveredAt": "2026-09-30T16:24:02.170Z",
+  "domain": "cofounder.co",
+  "summary": "Cofounder exposes three declared integration surfaces on cofounder.co subdomains: a hosted OAuth-protected MCP server at `api.superoptimizers.cofounder.co/mcp`, an Agent-First HTTP API at `api.superoptimizers.cofounder.co/cofounder-cli/v1`, and the `cofounder` CLI distributed via npm.",
+  "surfaces": [
+    {
+      "authStatus": "required",
+      "name": "Cofounder MCP server",
+      "slug": "cofounder-mcp-server",
+      "type": "mcp",
+      "url": "https://api.superoptimizers.cofounder.co/mcp"
+    },
+    {
+      "authStatus": "required",
+      "name": "Cofounder Agent-First API",
+      "slug": "cofounder-agent-first-api",
+      "type": "http",
+      "url": "https://api.superoptimizers.cofounder.co/cofounder-cli/v1"
+    },
+    {
+      "authStatus": "required",
+      "command": "cofounder",
+      "name": "cofounder CLI",
+      "packages": [
+        {
+          "identifier": "@generalintelligence/cofounder",
+          "registryType": "npm",
+          "runtimeHint": "npx"
+        }
+      ],
+      "slug": "cofounder-cli",
+      "type": "cli"
+    },
+    {
+      "authStatus": "required",
+      "name": "Cofounder Agent-First API",
+      "slug": "cofounder-api",
+      "spec": "https://api.superoptimizers.cofounder.co/openapi.json",
+      "type": "http",
+      "url": "https://api.superoptimizers.cofounder.co/cofounder-cli/v1"
+    }
+  ]
+}

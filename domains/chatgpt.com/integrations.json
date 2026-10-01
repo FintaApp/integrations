@@ -1,22 +1,33 @@
 {
-  "description": "ChatGPT is OpenAI’s conversational AI product for chat, productivity, and coding workflows. The chatgpt.com site includes end-user product pages for ChatGPT features, apps, desktop, and Codex.",
-  "discoveredAt": "2026-07-02T23:00:07.785Z",
+  "description": "ChatGPT is OpenAI’s chat and workspace product for interacting with AI models, documents, tools, and enterprise workflows. It also underpins Codex local tooling and selected partner sign-in flows tied to ChatGPT accounts and workspaces.",
+  "discoveredAt": "2026-09-30T16:18:55.829Z",
   "domain": "chatgpt.com",
-  "summary": "chatgpt.com publicly exposes a ChatGPT/Codex product site and mentions one developer-callable surface on this domain: the Codex CLI package; no public HTTP API, GraphQL API, or MCP server on chatgpt.com itself was found.",
+  "summary": "chatgpt.com exposes a developer CLI surface (Codex CLI) plus ChatGPT-issued credentials used for ChatGPT/Codex sign-in and Sign in with ChatGPT OAuth, but its documented HTTP API surfaces for model inference live on other OpenAI domains rather than chatgpt.com.",
   "surfaces": [
     {
-      "authStatus": "unknown",
+      "authStatus": "required",
       "command": "codex",
       "name": "Codex CLI",
       "packages": [
         {
           "identifier": "@openai/codex",
           "registryType": "npm",
-          "runtimeHint": "Node.js"
+          "runtimeHint": "node"
+        },
+        {
+          "identifier": "codex",
+          "registryType": "homebrew"
         }
       ],
       "slug": "codex-cli",
       "type": "cli"
+    },
+    {
+      "authStatus": "required",
+      "name": "ChatGPT-hosted Sign in with ChatGPT",
+      "slug": "chatgpt-hosted-sign-in-with-chatgpt",
+      "type": "http",
+      "url": "https://auth.openai.com"
     }
   ]
 }

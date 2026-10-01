@@ -1,61 +1,21 @@
 {
-  "description": "Atlassian builds cloud and self-managed software for project tracking, documentation, source control, service management, and AI-assisted teamwork. Its products include Jira, Confluence, Bitbucket, Jira Service Management, Rovo, and the Teamwork Graph platform.",
-  "discoveredAt": "2026-08-27T18:28:51.164Z",
+  "discoveredAt": "2026-10-01T14:11:05.593Z",
   "domain": "atlassian.com",
-  "summary": "Atlassian exposes Jira, Confluence, and Jira Service Management Cloud REST APIs; a cross-product Atlassian GraphQL Gateway; the OAuth-protected Rovo MCP server; and the `twg` Teamwork Graph CLI.",
+  "summary": "Atlassian exposes Jira, Confluence, Bitbucket, and GraphQL/MCP/TWG CLI developer surfaces, authenticated via Atlassian API tokens or OAuth 2.0 (3LO), Bitbucket-specific tokens/app passwords/OAuth, and browser-based OAuth login for the Rovo MCP server and TWG CLI.",
   "surfaces": [
-    {
-      "authStatus": "required",
-      "name": "Atlassian GraphQL Gateway",
-      "slug": "atlassian-graphql-gateway",
-      "spec": "introspection",
-      "type": "graphql",
-      "url": "https://api.atlassian.com/graphql"
-    },
-    {
-      "authStatus": "required",
-      "name": "Atlassian Rovo MCP server",
-      "slug": "atlassian-rovo-mcp-server",
-      "type": "mcp",
-      "url": "https://mcp.atlassian.com/v1/mcp"
-    },
-    {
-      "authStatus": "required",
-      "command": "twg",
-      "name": "Teamwork Graph CLI",
-      "packages": [
-        {
-          "identifier": "install script: https://teamwork-graph.atlassian.com/cli/install",
-          "registryType": "other"
-        },
-        {
-          "identifier": "windows install script: https://teamwork-graph.atlassian.com/cli/install.ps1",
-          "registryType": "other"
-        }
-      ],
-      "slug": "twg-cli",
-      "type": "cli"
-    },
-    {
-      "authStatus": "required",
-      "name": "Confluence Cloud REST API v2",
-      "slug": "confluence-cloud-rest-api-v2",
-      "type": "http",
-      "url": "https://<site>.atlassian.net/wiki/api/v2"
-    },
-    {
-      "authStatus": "required",
-      "name": "Jira Service Management Cloud REST API",
-      "slug": "jira-service-management-cloud-rest-api",
-      "type": "http",
-      "url": "https://<site>.atlassian.net/rest/servicedeskapi"
-    },
     {
       "authStatus": "required",
       "name": "Jira Cloud REST API",
       "slug": "jira-cloud-rest-api",
       "type": "http",
-      "url": "https://<site>.atlassian.net/rest/api/3"
+      "url": "https://{your-domain}.atlassian.net/rest/api/3"
+    },
+    {
+      "authStatus": "required",
+      "name": "Confluence Cloud REST API",
+      "slug": "confluence-cloud-rest-api",
+      "type": "http",
+      "url": "https://{your-domain}.atlassian.net/wiki/api/v2"
     }
   ]
 }

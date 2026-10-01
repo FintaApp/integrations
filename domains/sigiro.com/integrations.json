@@ -1,9 +1,17 @@
 {
-  "description": "Sigiro is an observability and diagnosis layer that ingests OpenTelemetry data and returns ranked findings, suspect deploys, traces, alerts, anomalies, and runnable SQL queries. It can be used as a hosted service or self-hosted as a single binary/container.",
-  "discoveredAt": "2026-09-17T09:34:19.635Z",
+  "description": "Sigiro ingests OpenTelemetry data and lets users query and inspect telemetry, traces, alerts, and profiles to diagnose what changed in their software. It is available as a hosted service and as a self-hosted binary or container.",
+  "discoveredAt": "2026-10-01T05:50:05.752Z",
   "domain": "sigiro.com",
-  "summary": "Sigiro exposes one OpenAPI-described HTTP API on `https://sigiro.com`, a self-hosted open-mode variant of the same API on `https://<your-sigiro-host>:9999`, a `sigiro` CLI, and a public streamable-HTTP MCP documentation server at `https://sigiro.com/mcp`.",
+  "summary": "sigiro.com exposes one OpenAPI-described HTTP API at `https://sigiro.com`, a self-hosted open-mode variant of the same API on `https://<your-sigiro-host>:9999`, a `sigiro` CLI, and an OAuth-protected streamable-HTTP MCP server at `https://sigiro.com/mcp`.",
   "surfaces": [
+    {
+      "authStatus": "required",
+      "name": "sigiro hosted telemetry API",
+      "slug": "sigiro-hosted-telemetry-api",
+      "spec": "https://sigiro.com/openapi.json",
+      "type": "http",
+      "url": "https://sigiro.com"
+    },
     {
       "authStatus": "required",
       "command": "sigiro",
@@ -23,19 +31,11 @@
       "type": "cli"
     },
     {
-      "authStatus": "none",
-      "name": "sigiro documentation MCP server",
+      "authStatus": "required",
+      "name": "Sigiro MCP server",
       "slug": "sigiro-documentation-mcp-server",
       "type": "mcp",
       "url": "https://sigiro.com/mcp"
-    },
-    {
-      "authStatus": "required",
-      "name": "sigiro hosted telemetry API",
-      "slug": "sigiro-hosted-telemetry-api",
-      "spec": "https://sigiro.com/openapi.json",
-      "type": "http",
-      "url": "https://sigiro.com"
     }
   ]
 }

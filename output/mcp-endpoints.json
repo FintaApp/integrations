@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-30T16:04:39.621Z",
+  "checkedAt": "2026-10-01T16:41:29.764Z",
   "endpoints": {
     "http://<server-host>:8080/mcp": {
       "status": "unknown",
@@ -1225,6 +1225,11 @@
       "status": "auth",
       "detail": "HTTP 401",
       "checkedAt": "2026-09-28T17:49:09.277Z"
+    },
+    "https://api.superoptimizers.cofounder.co/mcp": {
+      "status": "auth",
+      "detail": "HTTP 401",
+      "checkedAt": "2026-10-01T16:41:29.676Z"
     },
     "https://api.tally.so/mcp": {
       "status": "auth",
@@ -2810,6 +2815,11 @@
       "status": "live",
       "detail": "HTTP 200, initialize ok",
       "checkedAt": "2026-09-28T17:49:02.128Z"
+    },
+    "https://getnerdify.com/mcp": {
+      "status": "auth",
+      "detail": "HTTP 401",
+      "checkedAt": "2026-10-01T16:41:29.676Z"
     },
     "https://getoffers.com/.well-known/mcp/server-card.json": {
       "status": "dead",
