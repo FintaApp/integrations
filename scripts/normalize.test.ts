@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { buildDiscoveredEntries, buildSearchIndex } from "./normalize.ts";
+import { applyProviderIds, buildDiscoveredEntries, buildSearchIndex } from "./normalize.ts";
 import { denylistEntries } from "../src/lib/catalog-denylist.ts";
 
 describe("normalize discovered zero-surface domains", () => {
@@ -128,5 +128,16 @@ describe("rejected domains never reach the search index", () => {
     );
 
     expect(index.map((entry) => entry.domain)).toEqual(["synthetic-fixture.com"]);
+  });
+});
+
+describe("provider IDs", () => {
+  test("stamps mapped records and leaves the rest unset", () => {
+    const recs = [
+      { id: "mcp/a", kind: "mcp", slug: "a", name: "A", description: "", categories: [], feeds: ["claude"], raw: {} },
+      { id: "mcp/b", kind: "mcp", slug: "b", name: "B", description: "", categories: [], feeds: ["claude"], raw: {} },
+    ] as never;
+    const out = applyProviderIds(recs, new Map([["mcp/a", "a.com/mcp"], ["mcp/gone", "gone.com/mcp"]]));
+    expect(out.map((r) => r.providerId)).toEqual(["a.com/mcp", undefined]);
   });
 });
