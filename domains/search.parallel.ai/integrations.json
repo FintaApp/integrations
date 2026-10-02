@@ -1,0 +1,15 @@
+{
+  "description": "Parallel provides web search and content extraction tools for AI agents and applications. Its Search MCP lets MCP-aware clients access real-time web search and page fetching against Parallel’s search infrastructure.",
+  "discoveredAt": "2026-10-02T02:16:13.460Z",
+  "domain": "search.parallel.ai",
+  "summary": "search.parallel.ai exposes a public MCP server at `https://search.parallel.ai/mcp` with Streamable HTTP and no authentication required.",
+  "surfaces": [
+    {
+      "authStatus": "none",
+      "name": "Parallel Search MCP",
+      "slug": "parallel-search-mcp",
+      "type": "mcp",
+      "url": "https://search.parallel.ai/mcp"
+    }
+  ]
+}
