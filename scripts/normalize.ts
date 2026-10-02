@@ -3,6 +3,7 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { getDomain as tldGetDomain } from "tldts";
 import { DOMAIN_ALIASES, canonicalDomain } from "../src/lib/domain-aliases.ts";
+import { parseProviderIds } from "../src/lib/provider-id.ts";
 
 // Registrable domain per the Public Suffix List, with the PSL's private section
 // enabled so platform-hosted services resolve to their own host
@@ -995,6 +996,7 @@ function buildIndex(all: Integration[]) {
       feeds: r.feeds,
       popularity: r.popularity,
       devtool: undefined,
+      providerId: r.providerId,
       // What a client must actually point at to connect this surface. Callers
       // otherwise have to fetch the per-domain surface document just to learn
       // it, and had no stable way to tell whether a surface was already
@@ -1253,6 +1255,22 @@ function isPublic(r: Integration): boolean {
   return true; // openapi: apis.guru lists public API specs
 }
 
+/** Stamp each record named in `provider-ids.json` with its provider ID. A
+ *  mapped entry missing from the build only warns: feed rows come and go with
+ *  the nightly sync, and that must not fail the build. */
+export function applyProviderIds(recs: Integration[], ids: ReadonlyMap<string, string>): Integration[] {
+  const seen = new Set<string>();
+  const out = recs.map((r) => {
+    const providerId = ids.get(r.id);
+    if (!providerId) return r;
+    seen.add(r.id);
+    return { ...r, providerId };
+  });
+  const missing = [...ids.keys()].filter((id) => !seen.has(id));
+  if (missing.length > 0) console.warn(`provider-ids.json: ${missing.length} entries not in the catalog: ${missing.join(", ")}`);
+  return out;
+}
+
 function main() {
   // Order: build feed records → apply overrides (may add new records) → fill
   // tools from cache → swap broken icons for domain-based fallbacks → keep only
@@ -1307,10 +1325,14 @@ function main() {
   );
   const discoveredBuild = buildDiscovered(knownRawDomains, knownDomainKinds, knownDomains);
   const discovered = applyEndpointVerdicts(discoveredBuild.records.filter(isPublic));
-  const mcp = [...baseMcp, ...discovered.filter((r) => r.kind === "mcp")];
-  const openapi = [...baseOpenapi, ...discovered.filter((r) => r.kind === "openapi")];
-  const graphql = [...baseGraphql, ...discovered.filter((r) => r.kind === "graphql")];
-  const cli = [...baseCli, ...discovered.filter((r) => r.kind === "cli")];
+  const withIds = applyProviderIds(
+    [...baseMcp, ...baseOpenapi, ...baseGraphql, ...baseCli, ...discovered],
+    parseProviderIds(readJson(join(ROOT, "provider-ids.json"))),
+  );
+  const mcp = withIds.filter((r) => r.kind === "mcp");
+  const openapi = withIds.filter((r) => r.kind === "openapi");
+  const graphql = withIds.filter((r) => r.kind === "graphql");
+  const cli = withIds.filter((r) => r.kind === "cli");
 
   writeFileSync(join(OUTPUT, "mcp.json"), JSON.stringify(mcp, null, 2));
   writeFileSync(join(OUTPUT, "openapi.json"), JSON.stringify(openapi, null, 2));

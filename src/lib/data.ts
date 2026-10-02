@@ -39,6 +39,8 @@ export interface IndexRecord {
   popularity?: number;
   /** Optional ranking hint for developer-tool domains. */
   devtool?: boolean;
+  /** Executor provider ID for this surface's credential (`provider-ids.json`). */
+  providerId?: string;
 }
 
 export const index: IndexRecord[] = load("index.json", []);

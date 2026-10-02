@@ -24,6 +24,9 @@ export interface Integration {
    *  workloads all live on graph.microsoft.com). Standalone records get their
    *  own search row instead of merging into the domain's per-kind surface set. */
   standalone?: boolean;
+  /** Executor provider ID for this surface's credential, e.g. `vercel.com/api`.
+   *  From `provider-ids.json`; unset when authless or unclear. */
+  providerId?: string;
   description: string;
   url?: string;
   icon?: string;

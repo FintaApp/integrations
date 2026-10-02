@@ -240,7 +240,8 @@ function isIndexRecord(value: unknown): value is ApiIndexRecord {
     (value.url == null || typeof value.url === "string") &&
     (value.icon == null || typeof value.icon === "string") &&
     (value.popularity == null || typeof value.popularity === "number") &&
-    (value.devtool === undefined || typeof value.devtool === "boolean")
+    (value.devtool === undefined || typeof value.devtool === "boolean") &&
+    (value.providerId === undefined || typeof value.providerId === "string")
   );
 }
 
