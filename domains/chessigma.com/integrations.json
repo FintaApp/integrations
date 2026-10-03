@@ -1,0 +1,23 @@
+{
+  "description": "Chessigma is a chess analysis and puzzle platform that lets users analyze games, identify openings, solve daily puzzles, and estimate Elo changes. Its tools run largely client-side with Stockfish in the browser and also provide public developer access for chess-related data and utilities.",
+  "discoveredAt": "2026-10-02T18:46:44.121Z",
+  "domain": "chessigma.com",
+  "summary": "Chessigma exposes two public integration surfaces: a no-auth REST API with an OpenAPI spec and a no-auth MCP server over Streamable HTTP; no GraphQL API or CLI was found.",
+  "surfaces": [
+    {
+      "authStatus": "none",
+      "name": "Chessigma MCP server",
+      "slug": "chessigma-mcp-server",
+      "type": "mcp",
+      "url": "https://www.chessigma.com/api/mcp"
+    },
+    {
+      "authStatus": "none",
+      "name": "Chessigma Public API",
+      "slug": "chessigma-public-api",
+      "spec": "https://chessigma.com/openapi.json",
+      "type": "http",
+      "url": "https://www.chessigma.com/public-api/v1"
+    }
+  ]
+}

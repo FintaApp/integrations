@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-02T15:57:58.184Z",
+  "checkedAt": "2026-10-03T14:26:08.268Z",
   "endpoints": {
     "http://<server-host>:8080/mcp": {
       "status": "unknown",
@@ -6196,6 +6196,11 @@
       "detail": "HTTP 200, no initialize result",
       "checkedAt": "2026-09-28T17:48:47.848Z"
     },
+    "https://mdfromx.com/mcp": {
+      "status": "live",
+      "detail": "HTTP 200, initialize ok",
+      "checkedAt": "2026-10-03T14:26:07.969Z"
+    },
     "https://medeloop-mcp.medeloop.ai/mcp": {
       "status": "unknown",
       "detail": "HTTP 504",
@@ -7565,6 +7570,11 @@
       "status": "dead",
       "detail": "HTTP 404",
       "checkedAt": "2026-09-28T17:48:41.958Z"
+    },
+    "https://www.chessigma.com/api/mcp": {
+      "status": "live",
+      "detail": "HTTP 200, initialize ok",
+      "checkedAt": "2026-10-03T14:26:07.969Z"
     },
     "https://www.cogedim.com/mcp": {
       "status": "live",
