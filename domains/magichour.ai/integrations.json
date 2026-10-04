@@ -1,0 +1,37 @@
+{
+  "description": "Magic Hour is an AI media platform for generating and editing video, images, and audio in a browser workspace and through developer APIs. It also publishes agent-oriented resources such as MCP servers, OpenAPI, llms.txt, and agent skills for integrating those capabilities into apps and AI assistants.",
+  "discoveredAt": "2026-10-04T02:33:03.915Z",
+  "domain": "magichour.ai",
+  "summary": "Magic Hour exposes a bearer-authenticated REST API at api.magichour.ai plus two hosted MCP servers: a creation MCP at mcp.magichour.ai with OAuth or API-key auth, and a public docs-search MCP at docs.magichour.ai/mcp.",
+  "surfaces": [
+    {
+      "authStatus": "required",
+      "name": "Magic Hour REST API",
+      "slug": "magic-hour-rest-api",
+      "type": "http",
+      "url": "https://api.magichour.ai/v1"
+    },
+    {
+      "authStatus": "required",
+      "name": "Magic Hour MCP",
+      "slug": "magic-hour-mcp",
+      "type": "mcp",
+      "url": "https://mcp.magichour.ai/"
+    },
+    {
+      "authStatus": "none",
+      "name": "Magic Hour API Docs MCP",
+      "slug": "magic-hour-api-docs-mcp",
+      "type": "mcp",
+      "url": "https://docs.magichour.ai/mcp"
+    },
+    {
+      "authStatus": "required",
+      "name": "Magic Hour REST API",
+      "slug": "magic-hour-api",
+      "spec": "https://magichour.ai/openapi.json",
+      "type": "http",
+      "url": "https://api.magichour.ai/v1"
+    }
+  ]
+}

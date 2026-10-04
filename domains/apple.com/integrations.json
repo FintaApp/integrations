@@ -1,16 +1,9 @@
 {
-  "description": "Apple develops consumer and developer platforms including the App Store, Siri integrations, and Apple Music services. Its developer documentation covers APIs for managing App Store Connect resources and integrating cloud-backed media services with Siri.",
-  "discoveredAt": "2026-08-12T08:19:16.587Z",
+  "description": "Apple provides consumer devices, software platforms, and digital services, along with developer tooling and APIs for building and distributing apps and media integrations. Its developer documentation covers services including App Store Connect, Siri integrations, and Apple Music-related APIs.",
+  "discoveredAt": "2026-10-04T12:56:29.029Z",
   "domain": "apple.com",
-  "summary": "Apple exposes two documented developer HTTP APIs under apple.com ecosystem docs—App Store Connect API and SiriKit Cloud Media—and a known Apple Music MCP server endpoint on mcp.music.apple.com; App Store Connect uses signed JWT bearer auth, while SiriKit Cloud Media and the MCP server have unclear/publicly undocumented auth from the pages found.",
+  "summary": "Apple exposes two documented HTTP APIs for developers on apple.com—App Store Connect API and SiriKit Cloud Media—and an Apple Music MCP endpoint is cataloged at mcp.music.apple.com; App Store Connect uses JWT bearer auth from an App Store Connect API key, while SiriKit Cloud Media and the MCP endpoint could not be fully verified from public docs fetched here.",
   "surfaces": [
-    {
-      "authStatus": "unknown",
-      "name": "Apple Music MCP server",
-      "slug": "apple-music-mcp-server",
-      "type": "mcp",
-      "url": "https://mcp.music.apple.com/v1/longandcomplexstring294/mcp"
-    },
     {
       "authStatus": "required",
       "name": "App Store Connect API",
@@ -23,6 +16,13 @@
       "name": "SiriKit Cloud Media",
       "slug": "sirikit-cloud-media",
       "type": "http"
+    },
+    {
+      "authStatus": "unknown",
+      "name": "Apple Music MCP",
+      "slug": "apple-music-mcp-server",
+      "type": "mcp",
+      "url": "https://mcp.music.apple.com/v1/longandcomplexstring294/mcp"
     }
   ]
 }

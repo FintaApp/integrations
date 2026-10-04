@@ -1,0 +1,23 @@
+{
+  "description": "objekts Production Desk is a production-planning and feasibility service for commercial visual work operated by objekts. Its public integration surface is a remote MCP server for diagnosis, estimates, and optional human handoff, alongside machine-readable discovery endpoints (`/about`, `/health`, `/llms.txt`) documented by an OpenAPI contract.",
+  "discoveredAt": "2026-10-03T21:21:18.782Z",
+  "domain": "mcp.objekts.ai",
+  "summary": "mcp.objekts.ai exposes a public streamable HTTP MCP server at `/mcp` plus a small unauthenticated HTTP discovery contract/OpenAPI at the site root.",
+  "surfaces": [
+    {
+      "authStatus": "none",
+      "name": "objekts Production Desk",
+      "slug": "objekts-production-desk",
+      "type": "mcp",
+      "url": "https://mcp.objekts.ai/mcp"
+    },
+    {
+      "authStatus": "none",
+      "name": "objekts Production Desk public interface",
+      "slug": "objekts-production-desk-public-interface",
+      "spec": "https://mcp.objekts.ai/openapi.json",
+      "type": "http",
+      "url": "https://mcp.objekts.ai"
+    }
+  ]
+}
