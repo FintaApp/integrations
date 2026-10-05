@@ -1,21 +1,21 @@
 {
-  "discoveredAt": "2026-10-01T14:11:05.593Z",
+  "discoveredAt": "2026-10-05T07:23:37.202Z",
   "domain": "atlassian.com",
-  "summary": "Atlassian exposes Jira, Confluence, Bitbucket, and GraphQL/MCP/TWG CLI developer surfaces, authenticated via Atlassian API tokens or OAuth 2.0 (3LO), Bitbucket-specific tokens/app passwords/OAuth, and browser-based OAuth login for the Rovo MCP server and TWG CLI.",
+  "summary": "Atlassian exposes tenant-scoped Jira and Confluence Cloud REST APIs on `*.atlassian.net`, authenticated either with Atlassian account API-token Basic auth or Atlassian OAuth 2.0 (3LO) bearer tokens.",
   "surfaces": [
     {
       "authStatus": "required",
       "name": "Jira Cloud REST API",
       "slug": "jira-cloud-rest-api",
       "type": "http",
-      "url": "https://{your-domain}.atlassian.net/rest/api/3"
+      "url": "https://{site}.atlassian.net/rest/api/3"
     },
     {
       "authStatus": "required",
       "name": "Confluence Cloud REST API",
       "slug": "confluence-cloud-rest-api",
       "type": "http",
-      "url": "https://{your-domain}.atlassian.net/wiki/api/v2"
+      "url": "https://{site}.atlassian.net/wiki/api/v2"
     }
   ]
 }

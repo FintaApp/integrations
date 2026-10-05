@@ -1,21 +1,22 @@
 {
-  "description": "Shopee is an e-commerce marketplace platform. Its Open Platform lets partner applications integrate with seller shops, orders, listings, marketing, chat, and related commerce workflows.",
-  "discoveredAt": "2026-07-02T22:26:13.352Z",
+  "description": "Shopee is an e-commerce marketplace platform. Its Open Platform lets sellers and software partners build integrations for shop operations such as products, orders, logistics, marketing, and related workflows.",
+  "discoveredAt": "2026-10-04T17:26:51.855Z",
   "domain": "shopee.com",
-  "summary": "Shopee exposes a seller-focused HTTP Open Platform API plus an OAuth-protected MCP server at https://mcp.shopee.com/openai/v1.",
+  "summary": "Shopee exposes a seller-focused HTTP Open API on Shopee-owned API domains plus an OAuth-protected MCP server at mcp.shopee.com/openai/v1; no public GraphQL API or CLI was found.",
   "surfaces": [
+    {
+      "authStatus": "required",
+      "name": "Shopee Open API v2",
+      "slug": "shopee-open-api-v2",
+      "type": "http",
+      "url": "https://partner.shopeemobile.com/"
+    },
     {
       "authStatus": "required",
       "name": "Shopee MCP server",
       "slug": "shopee-mcp-server",
       "type": "mcp",
       "url": "https://mcp.shopee.com/openai/v1"
-    },
-    {
-      "authStatus": "required",
-      "name": "Shopee Open Platform API",
-      "slug": "shopee-open-platform-api",
-      "type": "http"
     }
   ]
 }

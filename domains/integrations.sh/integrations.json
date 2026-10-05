@@ -1,7 +1,36 @@
 {
-  "description": "integrations.sh is a website that catalogs publicly accessible integration surfaces such as MCP servers, OpenAPI APIs, GraphQL endpoints, and CLIs across many service domains. It lets users browse and inspect those integrations by domain.",
-  "discoveredAt": "2026-09-30T05:42:36.673Z",
+  "description": "integrations.sh is a registry of developer and agent integration surfaces across many services, cataloging APIs, MCP servers, GraphQL endpoints, and CLIs along with their authentication requirements. It also provides detect and discover tools for finding a domain's public integration surface.",
+  "discoveredAt": "2026-10-04T22:10:10.714Z",
   "domain": "integrations.sh",
-  "summary": "integrations.sh exposes a public website/catalog only; no documented developer integration surfaces (HTTP API, GraphQL API, MCP server, or CLI) were found on the domain.",
-  "surfaces": []
+  "summary": "integrations.sh exposes a public REST API, a public streamable-HTTP MCP server, and an npm-distributed `integrations` CLI; no credentials are required for the documented surfaces.",
+  "surfaces": [
+    {
+      "authStatus": "none",
+      "name": "integrations.sh API",
+      "slug": "integrations-sh-api",
+      "type": "http",
+      "url": "https://integrations.sh/api"
+    },
+    {
+      "authStatus": "none",
+      "name": "integrations.sh MCP server",
+      "slug": "integrations-sh-mcp-server",
+      "type": "mcp",
+      "url": "https://integrations.sh/mcp"
+    },
+    {
+      "authStatus": "none",
+      "command": "integrations",
+      "name": "integrations CLI",
+      "packages": [
+        {
+          "identifier": "integrations",
+          "registryType": "npm",
+          "runtimeHint": "npx"
+        }
+      ],
+      "slug": "integrations-cli",
+      "type": "cli"
+    }
+  ]
 }
