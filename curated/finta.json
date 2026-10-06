@@ -58,7 +58,7 @@
       "name": "Finta API",
       "origin": "vendor",
       "endpoint": "https://api.finta.io/v2",
-      "spec": "https://docs.finta.io/api/v2/openapi.json",
+      "spec": "https://api.finta.io/v2/openapi.json",
       "auth": "api_key",
       "authHeader": "Authorization: Bearer {finta_api_key}",
       "docs": "https://docs.finta.io/api/v2/overview"
